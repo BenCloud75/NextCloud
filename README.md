@@ -36,7 +36,8 @@ NextCloud is activated.
 <img src="https://user-images.githubusercontent.com/75790837/142221367-81803f6e-fc7f-4d85-8f93-e3a092a8455b.png" width=50% height=50%>
 
 ### 2- On Terminal
-Make sure SSH is activated. 
+<font color="blue"> Enable SSH </font>
+For each step described below, make sure SSH is activated. 
 
 Access your NAS via SSH via the terminal. Use the following command
 ```
@@ -48,8 +49,29 @@ _Example:_
 ```
 abcd@123.345.12.3 -p30
 ```
-
-
+<font color="blue"> Create Maria DB </font>
+Access your MariaDB with the following command
+```
+mysql -u root -p
+```
+Create the MariaDB database
+```
+CREATE DATABASE your_NextCloud_Data_Base_Name;
+```
+Create the dataBase User
+```
+CREATE USER 'your_Next_Cloud_User'@'localhost' IDENTIFIED BY 'your_Password';
+```
+Grant all privileges to the new user
+```
+GRANT ALL ON your_NextCloud_Data_Base_Name .* TO 'your_NextCloud_User'@'localhost';
+```
+Flush all the privileges and Ext from the MariaDB shell
+```
+FLUSH PRIVILEGES;
+EXIT;
+```
+Your database should be <font color="red"> created </font>!
 
 ## Security
 
