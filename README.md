@@ -35,10 +35,10 @@ NextCloud is activated.
 - Activate the SSH on your NAS. Go to "ControlPanel"/"Terminal & SNMP" / Activate SSH and configure port
 <img src="https://user-images.githubusercontent.com/75790837/142221367-81803f6e-fc7f-4d85-8f93-e3a092a8455b.png" width=50% height=50%>
 
-**On the Webstation**: 
+**On Configuration Panel / ShareFolder**: 
 All your NextCloud file will be stored on DSM under a SharedFile that I will call "NextCloud" for the rest of this guide. To do so, create a "NextCloud" ShareFolder on synology.
 
-<img src="https://user-images.githubusercontent.com/75790837/142231391-bb4f7c36-bf13-4cdb-ba0b-ab7068f9ad3a.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/75790837/142231391-bb4f7c36-bf13-4cdb-ba0b-ab7068f9ad3a.png" width=20% height=20%>
 
 ### 2.3.2 On Terminal
 #### <font color="blue"> Enable SSH </font>
