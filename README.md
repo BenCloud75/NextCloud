@@ -29,8 +29,8 @@ NextCloud is activated.
 **On the Webstation**: 
 - Create a dedicated PHP Scrip language setting "NextCloud". 
 - Update the default server portal with lastest APACHE and the new PHP script language you just created.
-![image](https://user-images.githubusercontent.com/75790837/142220878-46bd9f69-4a3e-4aae-8a7e-7adb5ec95a2a.png)
-![image](https://user-images.githubusercontent.com/75790837/142221130-e49acecb-4dc1-4d73-b602-7ff95c9de0f5.png)
+<img src="https://user-images.githubusercontent.com/75790837/142220878-46bd9f69-4a3e-4aae-8a7e-7adb5ec95a2a.png" width=50% height=50%>
+<img src="https://user-images.githubusercontent.com/75790837/142221130-e49acecb-4dc1-4d73-b602-7ff95c9de0f5.png" width=50% height=50%>
 
 - Activate the SSH on your NAS. Go to "ControlPanel"/"Terminal & SNMP" / Activate SSH and configure port
 <img src="https://user-images.githubusercontent.com/75790837/142221367-81803f6e-fc7f-4d85-8f93-e3a092a8455b.png" width=50% height=50%>
