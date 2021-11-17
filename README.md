@@ -18,7 +18,7 @@ On your synologie NAS, instal the following packages:
 - PHP My Admin (latest version). 
 - MariaDB
 - Text Editor
-<img src="https://user-images.githubusercontent.com/75790837/142226773-f79f2fce-ecb0-4aab-ab93-4bc92fcce6bc.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/75790837/142227035-e64ad85c-b564-4fc1-adc1-44ab404e54b2.png" width=30% height=30%>
 
 ### Post-Condition
 NextCloud is activated.
