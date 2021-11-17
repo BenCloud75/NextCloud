@@ -39,11 +39,15 @@ NextCloud is activated.
 Make sure SSH is activated. 
 
 Access your NAS via SSH via the terminal. Use the following command
-```ssh YOUR_USER_NAME@NAS_IP_ADDRESS -p30```
+```
+ssh YOUR_USER_NAME@NAS_IP_ADDRESS -p30
+```
 
 where 30 is my port. 
 _Example:_ 
-```abcd@123.345.12.3 -p30```
+```
+abcd@123.345.12.3 -p30
+```
 
 
 
