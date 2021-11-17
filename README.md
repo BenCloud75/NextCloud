@@ -127,7 +127,7 @@ Configure with:
 - your_Password
 - your_NextCloud_Data_Base_user
 - 127.0.0.1:3307
-<img src="https://user-images.githubusercontent.com/75790837/142233143-f2271823-7135-4eb7-bf1b-2f1332282675.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/75790837/142233143-f2271823-7135-4eb7-bf1b-2f1332282675.png" width=40% height=40%>
 
 You are now connected to NextCloud!! Enjoy! :)
 ## 3 Security
