@@ -1,5 +1,5 @@
 # NextCloud Synology
-## PreRequisites
+## 1 PreRequisites
 
 For my project, I am using the following device: 
 
@@ -9,8 +9,8 @@ For my project, I am using the following device:
 - Internet provider's router model
 - Nextcloud latest stable version for home cloud
 
-## Installation
-### Pre-Condition
+## 2 Installation
+### 2.1 Pre-Condition
 On your synologie NAS, instal the following packages:
 - Webstation.
 - Apache (latest version).
@@ -20,11 +20,11 @@ On your synologie NAS, instal the following packages:
 - Text Editor
 <img src="https://user-images.githubusercontent.com/75790837/142227035-e64ad85c-b564-4fc1-adc1-44ab404e54b2.png" width=40% height=40%>
 
-### Post-Condition
+### 2.2 Post-Condition
 NextCloud is activated.
 
-### Installation Detail
-#### 1- On DSM
+### 2.3 Installation Detail
+#### 2.3.1 On DSM
 
 **On the Webstation**: 
 - Create a dedicated PHP Scrip language setting "NextCloud". 
@@ -35,7 +35,12 @@ NextCloud is activated.
 - Activate the SSH on your NAS. Go to "ControlPanel"/"Terminal & SNMP" / Activate SSH and configure port
 <img src="https://user-images.githubusercontent.com/75790837/142221367-81803f6e-fc7f-4d85-8f93-e3a092a8455b.png" width=50% height=50%>
 
-### 2- On Terminal
+**On the Webstation**: 
+All your NextCloud file will be stored on DSM under a SharedFile that I will call "NextCloud" for the rest of this guide. To do so, create a "NextCloud" ShareFolder on synology.
+
+<img src="https://user-images.githubusercontent.com/75790837/142231391-bb4f7c36-bf13-4cdb-ba0b-ab7068f9ad3a.png" width=50% height=50%>
+
+### 2.3.2 On Terminal
 #### <font color="blue"> Enable SSH </font>
 For each step described below, make sure SSH is activated. 
 
@@ -72,7 +77,43 @@ EXIT;
 Your database should be <font color="red"> created </font>!
 
 #### <font color="blue"> Download NextCloud Image </font>
+Access your NAS via SSH (make sure SSH is enable on DSM). 
+```
+ssh YOUR_USER_NAME@NAS_IP_ADDRESS -p30
+```
+Acquire the NAS with root priviledge with `sudo -i`. System will ask for your NAS admin password. 
 
-## Security
+You are now connected as admin to your NAS. This will allow you to perform modification as an Admin.
 
-## Error Case
+When you installed the "WebStation" package, a new folder "web" should have been created in your Volume (e.g. /volume1/web/). Check this is the case `cd /volume1/web/`and `ls`. The folder `web_images`should be returned. With this command, you are now located inside the folder "web".
+
+Now that you make sure the folder "web" exists in your NAS, you will need to download the latest stable version of NextCloud. The version is available here: https://nextcloud.com/install/#instructions-server . Right click on the DOWNLOAD button to "**copy the link address**" of the latest NextCloud version. Then, download the new version to your "web" folder with the command line `curl -O https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip`. Press Enter. 
+
+Nextcloud ZIP file "nextcloud-22.2.3" should be downloaded in your "web" folder. Extract the .zip file with the command `7z x nextcloud-22.2.3.zip`
+
+Give the right rights to the new folder "nextcloud" created in Volume1 with `chown -R http:http nextcloud` + `chmod -R 0770 nextcloud` + `chown -R http:http volume1/NextCloud` + `chmod -R 0770 NextCloud`.
+```
+sudo -i
+ENTER YOUR PASSWORD
+cd/volume1/web/
+ls
+curl -O https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip
+7z x nextcloud-22.2.3.zip
+
+chown -R http:http nextcloud
+chmod -R 0770 nextcloud
+chown -R http:http /volume1/NextCloud/
+chmod -R 0770 /volume1/NextCloud
+
+where: 
+**volume1** is your main volume. 
+**web** is the folder used by your webstation on DSM
+**https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip** is the link address to download synology.
+
+```
+
+
+
+## 3 Security
+
+## 4 Error Case
