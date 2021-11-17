@@ -1,5 +1,10 @@
 # NextCloud Synology
-
+##### Table of Contents  
+[Headers](#headers)  
+[Emphasis](#emphasis)  
+...snip...    
+<a name="headers"/>
+## Headers
 ## PreRequisites
 
 For my project, I am using the following device: 
