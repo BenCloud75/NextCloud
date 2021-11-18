@@ -94,9 +94,9 @@ Nextcloud ZIP file "nextcloud-22.2.3" should be downloaded in your "web" folder.
 Give the right rights to the new folder "nextcloud" extracted in web and the ShareFolder "NextCloud" created in **2.3.1** inside Volume1 with `chown -R http:http nextcloud` + `chmod -R 0770 nextcloud` + `chown -R http:http volume1/NextCloud` + `chmod -R 0770 NextCloud`.
 ```
 sudo -i
---------------------------
-ENTER YOUR PASSWORD
---------------------------
+# --------------------------
+# ENTER YOUR PASSWORD
+# --------------------------
 cd/volume1/web/
 ls
 curl -O https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip
@@ -107,11 +107,11 @@ chmod -R 0770 nextcloud
 chown -R http:http /volume1/NextCloud/
 chmod -R 0770 /volume1/NextCloud
 
-------------------------------
-where: 
-- volume1 is your main volume. 
-- web is the folder used by your webstation on DSM
-- https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip** is the link address to download synology.
+#------------------------------
+# where: 
+#- volume1 is your main volume. 
+#- web is the folder used by your webstation on DSM
+#- https://download.nextcloud.com/server/releases/nextcloud-22.2.3.zip** is the link address to download synology.
 
 ```
 
