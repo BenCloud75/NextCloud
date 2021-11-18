@@ -149,6 +149,7 @@ _**Solution**_:
 To solve the issue, I deleted my MariaDB data base (originally created via the DSM interface) and created a new database using the terminal (steps I mentionned in 2.3.2).
 
 The idea is to GRANT ALL priviledge to the user. I did this at the beggining and added the FLUSH PRIVILEGES and it worked....
+
 _**sources**_:
 [#21690](https://github.com/nextcloud/server/issues/21690)
 
