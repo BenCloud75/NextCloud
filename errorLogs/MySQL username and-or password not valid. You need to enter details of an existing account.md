@@ -7,13 +7,14 @@ This was the main issue I faced, and lost time on. It appeared at the end of the
 _**Root**_: From whatever reason, NextCloud cannot find the user account of the MariaDB database you mentionned...
 
 _**Solution**_: 
-To solve the issue, I deleted my MariaDB data base (originally created via the DSM interface) and created a new database using the terminal.
-
+To solve the issue, I **deleted my MariaDB data base** (originally created via the DSM interface) and created a new database using the terminal.
 The idea is to GRANT ALL priviledge to the user. I did this at the beggining and added the FLUSH PRIVILEGES and it worked....
 
-```
-Example: 
+1- Delete your MariaDB database.
+2- Access MariaDB via the terminal with the following command `mysql -u root -p`
 
+3- Run the following lines one after the others.
+```
 CREATE DATABASE your_NextCloud_Data_Base_Name; #replace your_NextCloud_Data_Base_Name
 
 CREATE USER 'your_Next_Cloud_User'@'localhost' IDENTIFIED BY 'your_Password'; #replace your_Next_Cloud_User
