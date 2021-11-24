@@ -139,17 +139,3 @@ Activate the 2FA authentication on your NextCloud account!
 Ports are set as default. Make sure you remove them!
 To keep track of your port usage, you can maintain a small documentation when building up your NextCloud solution.
 
-## 4 Error Case
-### MySQL username and/or password not valid You need to enter details of an existing account
-The main issue I faced, and lost time on was this one. It appeared at the end of the configuration, when creating my admin NextCloud account. 
-
-_**Root**_: From whatever reason, NextCloud cannot find the user account of the MariaDB database you mentionned...
-
-_**Solution**_: 
-To solve the issue, I deleted my MariaDB data base (originally created via the DSM interface) and created a new database using the terminal (steps I mentionned in 2.3.2).
-
-The idea is to GRANT ALL priviledge to the user. I did this at the beggining and added the FLUSH PRIVILEGES and it worked....
-
-_**sources**_:
-[#21690](https://github.com/nextcloud/server/issues/21690)
-
