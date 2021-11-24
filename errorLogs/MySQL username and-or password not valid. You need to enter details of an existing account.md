@@ -11,6 +11,7 @@ To solve the issue, I **deleted my MariaDB data base** (originally created via t
 The idea is to GRANT ALL priviledge to the user. I did this at the beggining and added the FLUSH PRIVILEGES and it worked....
 
 1- Delete your MariaDB database.
+
 2- Access MariaDB via the terminal with the following command `mysql -u root -p`
 
 3- Run the following lines one after the others.
